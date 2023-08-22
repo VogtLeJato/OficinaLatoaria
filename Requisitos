@@ -1,0 +1,13 @@
+[Requisitos Funcionais]
+-Gerenciar os carros que entram e saem
+-Gerenciar os insumos para cada trabalho
+-Gerenciar os preços de cada insumo
+-Calcular os preços de cada insumo
+-Gerenciar o tempo de conclusão de cada trabalho
+-Gerenciar tempo de cada etapa ?
+
+[Requisitos Não Funcionais]
+-Ser Web
+-API e Cliente
+-Parte em Mobile?
+-API em C# ASP
