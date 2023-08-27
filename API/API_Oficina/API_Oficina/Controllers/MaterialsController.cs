@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,55 +11,55 @@ namespace API_Oficina.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController : ControllerBase
+    public class MaterialsController : ControllerBase
     {
         private readonly OficinaContext _context;
 
-        public CarsController(OficinaContext context)
+        public MaterialsController(OficinaContext context)
         {
             _context = context;
         }
 
-        // GET: api/Cars
+        // GET: api/Materials
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Car>>> GetCars()
+        public async Task<ActionResult<IEnumerable<Material>>> GetMaterials()
         {
-          if (_context.Cars == null)
+          if (_context.Materials == null)
           {
               return NotFound();
           }
-            return await _context.Cars.ToListAsync();
+            return await _context.Materials.ToListAsync();
         }
 
-        // GET: api/Cars/5
+        // GET: api/Materials/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Car>> GetCar(long id)
+        public async Task<ActionResult<Material>> GetMaterial(long id)
         {
-          if (_context.Cars == null)
+          if (_context.Materials == null)
           {
               return NotFound();
           }
-            var car = await _context.Cars.FindAsync(id);
+            var material = await _context.Materials.FindAsync(id);
 
-            if (car == null)
+            if (material == null)
             {
                 return NotFound();
             }
 
-            return car;
+            return material;
         }
 
-        // PUT: api/Cars/5
+        // PUT: api/Materials/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCar(long id, Car car)
+        public async Task<IActionResult> PutMaterial(long id, Material material)
         {
-            if (id != car.Id)
+            if (id != material.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(car).State = EntityState.Modified;
+            _context.Entry(material).State = EntityState.Modified;
 
             try
             {
@@ -67,7 +67,7 @@ namespace API_Oficina.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CarExists(id))
+                if (!MaterialExistis(id))
                 {
                     return NotFound();
                 }
@@ -80,44 +80,44 @@ namespace API_Oficina.Controllers
             return NoContent();
         }
 
-        // POST: api/Cars
+        // POST: api/Materials
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Car>> PostCar(Car car)
+        public async Task<ActionResult<Material>> PostMaterial(Material material)
         {
-          if (_context.Cars == null)
+          if (_context.Materials == null)
           {
-              return Problem("Entity set 'CarContext.Cars'  is null.");
+              return Problem("Entity set 'CarContext.Materials'  is null.");
           }
-            _context.Cars.Add(car);
+            _context.Materials.Add(material);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCar", new { id = car.Id }, car);
+            return CreatedAtAction("GetMaterial", new { id = material.Id }, material);
         }
 
-        // DELETE: api/Cars/5
+        // DELETE: api/Materials/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCar(long id)
+        public async Task<IActionResult> DeleteMaterial(long id)
         {
-            if (_context.Cars == null)
+            if (_context.Materials == null)
             {
                 return NotFound();
             }
-            var car = await _context.Cars.FindAsync(id);
-            if (car == null)
+            var material = await _context.Materials.FindAsync(id);
+            if (material == null)
             {
                 return NotFound();
             }
 
-            _context.Cars.Remove(car);
+            _context.Materials.Remove(material);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool CarExists(long id)
+        private bool MaterialExistis(long id)
         {
-            return (_context.Cars?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Materials?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

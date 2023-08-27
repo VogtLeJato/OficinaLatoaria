@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API_Oficina.Migrations
 {
-    [DbContext(typeof(CarContext))]
+    [DbContext(typeof(OficinaContext))]
     [Migration("20230823000520_CriandoTabelaCar")]
     partial class CriandoTabelaCar
     {
