@@ -6,55 +6,55 @@ namespace API_Oficina.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController : ControllerBase
+    public class ClientsController : ControllerBase
     {
         private readonly OficinaContext _context;
 
-        public CarsController(OficinaContext context)
+        public ClientsController(OficinaContext context)
         {
             _context = context;
         }
 
-        // GET: api/Cars
+        // GET: api/Clients
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Car>>> GetCars()
+        public async Task<ActionResult<IEnumerable<Client>>> GetClients()
         {
-          if (_context.Cars == null)
+          if (_context.Clients == null)
           {
               return NotFound();
           }
-            return await _context.Cars.ToListAsync();
+            return await _context.Clients.ToListAsync();
         }
 
-        // GET: api/Cars/5
+        // GET: api/Clients/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Car>> GetCar(long id)
+        public async Task<ActionResult<Client>> GetClient(int id)
         {
-          if (_context.Cars == null)
+          if (_context.Clients == null)
           {
               return NotFound();
           }
-            var car = await _context.Cars.FindAsync(id);
+            var client = await _context.Clients.FindAsync(id);
 
-            if (car == null)
+            if (client == null)
             {
                 return NotFound();
             }
 
-            return car;
+            return client;
         }
 
-        // PUT: api/Cars/5
+        // PUT: api/Clients/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCar(long id, Car car)
+        public async Task<IActionResult> PutClient(int id, Client client)
         {
-            if (id != car.Id)
+            if (id != client.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(car).State = EntityState.Modified;
+            _context.Entry(client).State = EntityState.Modified;
 
             try
             {
@@ -62,7 +62,7 @@ namespace API_Oficina.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CarExists(id))
+                if (!ClientExists(id))
                 {
                     return NotFound();
                 }
@@ -75,44 +75,44 @@ namespace API_Oficina.Controllers
             return NoContent();
         }
 
-        // POST: api/Cars
+        // POST: api/Clients
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Car>> PostCar(Car car)
+        public async Task<ActionResult<Client>> PostClient(Client client)
         {
-          if (_context.Cars == null)
+          if (_context.Clients == null)
           {
-              return Problem("Entity set 'CarContext.Cars'  is null.");
+              return Problem("Entity set 'OficinaContext.Clients'  is null.");
           }
-            _context.Cars.Add(car);
+            _context.Clients.Add(client);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCar", new { id = car.Id }, car);
+            return CreatedAtAction("GetClient", new { id = client.Id }, client);
         }
 
-        // DELETE: api/Cars/5
+        // DELETE: api/Clients/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCar(long id)
+        public async Task<IActionResult> DeleteClient(int id)
         {
-            if (_context.Cars == null)
+            if (_context.Clients == null)
             {
                 return NotFound();
             }
-            var car = await _context.Cars.FindAsync(id);
-            if (car == null)
+            var client = await _context.Clients.FindAsync(id);
+            if (client == null)
             {
                 return NotFound();
             }
 
-            _context.Cars.Remove(car);
+            _context.Clients.Remove(client);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool CarExists(long id)
+        private bool ClientExists(int id)
         {
-            return (_context.Cars?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Clients?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
