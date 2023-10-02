@@ -1,0 +1,4 @@
+
+Funções a fazer:
+Média de preço do trabalho com base nos outros trabalhos.
+Faturamento esperado do mês.
