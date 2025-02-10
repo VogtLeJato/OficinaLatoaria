@@ -1,4 +1,4 @@
-﻿namespace API_Oficina.Models
+﻿namespace API_Oficina.Domain
 {
     public class BuyedMaterial
     {

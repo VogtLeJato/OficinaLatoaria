@@ -1,4 +1,4 @@
-using API_Oficina.Models;
+using API_Oficina.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

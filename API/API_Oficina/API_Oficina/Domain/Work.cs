@@ -1,4 +1,4 @@
-﻿namespace API_Oficina.Models
+﻿namespace API_Oficina.Domain
 {
     public class Work
     {
@@ -8,8 +8,8 @@
         public DateTime? Created { get; set; }
         public DateTime? Updated { get; set;}
         public bool IsConcluded { get; set; }
-        public long LaborPrice { get; set; }
-        public long CurrentPrice
+        public float LaborPrice { get; set; }
+        public float CurrentPrice
         {
             get
             {
