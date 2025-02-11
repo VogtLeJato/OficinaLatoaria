@@ -746,7 +746,6 @@ C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\staticwebassets\
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API_Oficina.props
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API_Oficina.props
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\staticwebassets.pack.json
-C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\API_Ofic.573797F2.Up2Date
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\API_Oficina.dll
 C:\dev\OficinaLatoaria\oficina-api\API_Oficina\obj\Debug\net7.0\refint\API_Oficina.dll
