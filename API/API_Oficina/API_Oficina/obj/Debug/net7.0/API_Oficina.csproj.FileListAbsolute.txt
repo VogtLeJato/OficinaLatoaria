@@ -432,7 +432,6 @@ C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\staticwebass
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\staticwebassets.build.json
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\staticwebassets.development.json
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\scopedcss\bundle\API_Oficina.styles.css
-C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\API_Oficina.csproj.CopyComplete
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\API_Oficina.dll
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\refint\API_Oficina.dll
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\API_Oficina.pdb
@@ -487,3 +486,8 @@ C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\bin\Debug\net7.0\vi\Humanizer
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\bin\Debug\net7.0\zh-CN\Humanizer.resources.dll
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\bin\Debug\net7.0\zh-Hans\Humanizer.resources.dll
 C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\bin\Debug\net7.0\zh-Hant\Humanizer.resources.dll
+C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\bin\Debug\net7.0\API_Oficina.staticwebassets.endpoints.json
+C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\API_Oficina.sourcelink.json
+C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\staticwebassets\msbuild.API_Oficina.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\dev\OficinaLatoaria\API\API_Oficina\API_Oficina\obj\Debug\net7.0\API_Ofic.573797F2.Up2Date

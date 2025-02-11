@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using API_Oficina.Domain;
 using API_Oficina.Application;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace API_Oficina.Controllers
 {

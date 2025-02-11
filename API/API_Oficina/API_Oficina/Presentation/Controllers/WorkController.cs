@@ -60,10 +60,10 @@ namespace API_Oficina.Controllers
             return deleted ? NoContent() : NotFound();
         }
 
-        [HttpGet("Average/{workTypeId}")]
-        public async Task<IActionResult> GetMediaPreco(int workTypeId)
+        [HttpGet("Average/{workTypeId?}")]
+        public async Task<IActionResult> GetAveragePriceByWorkType(int? workTypeId)
         {
-            var media = await _workService.CalcularMediaPrecoTrabalhoAsync(workTypeId);
+            var media = await _workService.EstimatePriceByByWorkTypeAsync(workTypeId);
             return Ok(media);
         }
     }

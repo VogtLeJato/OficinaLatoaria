@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "vbzVaTEyb9/1JeJ0PjegxGlwRiA/XMQ4nREADbrcg2k=",
+  "Hash": "CDBKygwGEjTGvtkmpwuCbRgOMZx/yWum6Nb2s4vIJyM=",
   "Source": "API_Oficina",
   "BasePath": "_content/API_Oficina",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

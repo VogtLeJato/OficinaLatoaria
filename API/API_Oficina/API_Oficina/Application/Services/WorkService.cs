@@ -35,13 +35,18 @@ namespace API_Oficina.Application{
             return await _workRepository.DeleteAsync(id);
         }
     
-        public async Task<float> CalcularMediaPrecoTrabalhoAsync(int? workTypeId)
+        public async Task<float> EstimatePriceByByWorkTypeAsync(int? workTypeId)
         {
             var works = await _workRepository.GetWorksByTypeAsync(workTypeId);
             if (works == null || !works.Any())
                 return 0;
     
             return works.Average(w => w.CurrentPrice);
+        }
+
+        public async Task<float> EstimateRevenueForThisMonth()
+        {
+
         }
     }
 }
