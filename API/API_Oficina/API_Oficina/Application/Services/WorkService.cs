@@ -43,10 +43,5 @@ namespace API_Oficina.Application{
     
             return works.Average(w => w.CurrentPrice);
         }
-
-        public async Task<float> EstimateRevenueForThisMonth()
-        {
-
-        }
     }
 }

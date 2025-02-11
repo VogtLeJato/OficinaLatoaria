@@ -10,5 +10,6 @@ namespace API_Oficina.Application
         Task<bool> UpdateAsync(Work work);
         Task<bool> DeleteAsync(int id);
         Task<List<Work>> GetWorksByTypeAsync(int? workTypeId = null);
+        Task<List<Work>> GetCompletedWorksByPeriodAsync(DateTime startDate, DateTime endDate);
     }
 }

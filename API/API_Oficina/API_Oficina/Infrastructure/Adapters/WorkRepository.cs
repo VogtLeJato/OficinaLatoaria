@@ -51,5 +51,12 @@ namespace API_Oficina.Adapters
                                  .Where(w => workTypeId == null ? w.Type == null : w.Type != null && w.Type.Id == workTypeId)
                                  .ToListAsync();
         }
+
+        public async Task<List<Work>> GetCompletedWorksByPeriodAsync(DateTime startDate, DateTime endDate)
+        {
+            return await _context.Works
+                                 .Where(w => w.IsConcluded == true && w.Updated >= startDate && w.Updated <= endDate)
+                                 .ToListAsync();
+        }
     }
 }
